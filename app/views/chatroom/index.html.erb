@@ -8,15 +8,8 @@
   <div class="ui fluid raised card chatbox">
       <div class="content">
         <div class="ui small feed">
-          <% @messages.each do |message|%>
-            <div class="event">
-              <div class="content">
-                <div class="summary">
-                  <em><%= message.user.username %></em>: <%= message.body %>
-                </div>
-              </div>
-            </div>
-          <% end %>
+          <%# call a partial with the same name as the model call (Message) %>
+          <%= render @messages%>
         </div>
       </div>
       <div class="extra content">
